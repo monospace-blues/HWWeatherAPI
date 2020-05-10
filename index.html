@@ -16,23 +16,99 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4">
-                <!-- Search bar -->
 
+            <!-- First column will just be the where we have the search bar and a list of cities to select -->
+            <div class="col-md-4">
+
+                <!-- Search bar -->
                 <!-- See if you can strech the search bar fully -->
-                <form class="form-inline mb-2">
+                <form class="form-inline mb-2" id="searchCity">
                     <input class="form-control" type="search" placeholder="Search a City" aria-label="Search">
                     <button class="btn btn-primary" type="submit">Search</button>
                 </form>
 
                 <!-- Lists of cities -->
                 <div class="list-group">
-                    <button type="button" class="list-group-item list-group-item-action active">Austin</button>
-                    <button type="button" class="list-group-item list-group-item-action">Chicago</button>
-                    <button type="button" class="list-group-item list-group-item-action">Minneapolis</button>
-                    <button type="button" class="list-group-item list-group-item-action">Los Angeles</button>
-                    <button type="button" class="list-group-item list-group-item-action">New York City</button>
-                  </div>
+                    <button type="button" class="list-group-item list-group-item-action active" data-name="London">London</button>
+                    <button type="button" class="list-group-item list-group-item-action" data-name="Chicago">Chicago</button>
+                    <button type="button" class="list-group-item list-group-item-action" data-name="Minneapolis">Minneapolis</button>
+                    <button type="button" class="list-group-item list-group-item-action" data-name="Los Angeles">Los Angeles</button>
+                    <button type="button" class="list-group-item list-group-item-action" data-name="New York City">New York City</button>
+                    <button type="button" class="list-group-item list-group-item-action" data-name="Seattle">Seattle</button>
+                    <button type="button" class="list-group-item list-group-item-action" data-name="San Francisco">San Francisco</button>
+                    <button type="button" class="list-group-item list-group-item-action" data-name="Denver">Denver</button>
+                </div>
+            </div>
+
+            <!-- Second column will have two rows where we'll show the city and the 5 day forecast -->
+            <div class="col-md-8">
+
+                <!-- This row will have the weather for the day -->
+                <div class="row border py-2">
+                    <div class="col-md-12" id="cityWeather">
+                        <h3></h3>
+                        <p id="temp">Temperature: </p>
+                        <p id="humidity">Humidity: </p>
+                        <p id="wind">Wind Speed: </p>
+                        <p id="forecast">Forecast: </p>
+                    </div>
+
+                </div>
+
+                <!-- This row will have the 5 day forcast -->
+                <div class="row border py-2">
+                    <div class="col-md-12">
+                        <h3>5-Day Weather Forecast</h3>
+                        <div class="card-deck">
+                            <div class="card bg-primary text-white" id="nextDay">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
+                                <p class="card-text temperature">Temp: </p>
+                                <p class="card-text humidity">Humidity: </p>
+                              </div>
+                            </div>
+
+                            <div class="card bg-primary text-white" id="secondDay">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
+                                <p class="card-text temperature">Temp: </p>
+                                <p class="card-text humidity">Humidity: </p>
+                              </div>
+                            </div>
+
+                            <div class="card bg-primary text-white" id="thirdDay">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
+                                <p class="card-text temperature">Temp: </p>
+                                <p class="card-text humidity">Humidity: </p>
+                              </div>
+                            </div>
+
+                            <div class="card bg-primary text-white" id="fourthDay">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
+                                  <p class="card-text temperature">Temp: </p>
+                                  <p class="card-text humidity">Humidity: </p>
+                                </div>
+                            </div>
+
+                            <div class="card bg-primary text-white" id="fifthDay">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
+                                  <p class="card-text temperature">Temp: </p>
+                                  <p class="card-text humidity">Humidity: </p>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                </div>
             </div>
 
         </div>
